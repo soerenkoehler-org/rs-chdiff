@@ -71,7 +71,10 @@ fn non_existant_root_path() {
 
 #[test]
 fn errors_on_bad_symlink() {
-    let path = PathBuf::from_str("generated/filelist_test_badsymlink/data").unwrap();
+    let path = PathBuf::from_str("generated/filelist_test_badsymlink/data")
+        .unwrap()
+        .canonicalize()
+        .unwrap();
     let file_list = FileList::from_path(&path, &to_patternlist(&[]), &to_patternlist(&[])).unwrap();
 
     let actual = file_list.errors.get(0).unwrap();
