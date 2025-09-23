@@ -8,6 +8,13 @@ Create, verify and compare hash sums on whole directory trees.
 
 edition = "2024"
 
+[profile.release]
+panic = "abort"
+lto = "fat"
+codegen-units = 1
+opt-level = "s"
+strip="symbols"
+
 [dependencies]
 clap = { version = "4", features = ["cargo", "derive"] }
 serde = { version = "1", features = ["derive"] }
