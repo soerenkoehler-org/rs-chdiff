@@ -87,6 +87,6 @@ impl FileList {
                     .for_each(|thread| thread.join().unwrap());
             }
             Err(err) => send_error(tx, Error::other(format!("{} {}", err, dir.display()))),
-        };
+        }
     }
 }
