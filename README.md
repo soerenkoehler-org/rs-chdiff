@@ -20,12 +20,14 @@ Lorem ipsum.
 
 ----
 
-[badge-main]:   https://github.com/soerenkoehler/rs-chdiff/actions/workflows/rs-chdiff-main.yml/badge.svg
-[github-main]:  https://github.com/soerenkoehler/rs-chdiff/actions/workflows/rs-chdiff-main.yml
+[badge-main]:   https://github.com/soerenkoehler-org/rs-chdiff/actions/workflows/rs-chdiff.yml/badge.svg?branch=main
+[github-main]:  https://github.com/soerenkoehler-org/rs-chdiff/actions/workflows/rs-chdiff.yml
 
-[badge-dev]:    https://github.com/soerenkoehler/rs-chdiff/actions/workflows/rs-chdiff-dev.yml/badge.svg
-[github-dev]:   https://github.com/soerenkoehler/rs-chdiff/actions/workflows/rs-chdiff-dev.yml
+[badge-dev]:    https://github.com/soerenkoehler-org/rs-chdiff/actions/workflows/rs-chdiff.yml/badge.svg?branch=dev
+[github-dev]:   https://github.com/soerenkoehler-org/rs-chdiff/actions/workflows/rs-chdiff.yml
 
 [sonar]:        https://sonarcloud.io/summary/overall?id=soerenkoehler_rs-chdiff
 [badge-status]: https://sonarcloud.io/api/project_badges/measure?project=soerenkoehler_rs-chdiff&metric=alert_status
 [badge-cover]:  https://sonarcloud.io/api/project_badges/measure?project=soerenkoehler_rs-chdiff&metric=coverage
+
+[![rs-chdiff](https://github.com/soerenkoehler-org/rs-chdiff/actions/workflows/rs-chdiff.yml/badge.svg?branch=main)](https://github.com/soerenkoehler-org/rs-chdiff/actions/workflows/rs-chdiff.yml)
