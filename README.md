@@ -29,5 +29,3 @@ Lorem ipsum.
 [sonar]:        https://sonarcloud.io/summary/overall?id=soerenkoehler_rs-chdiff
 [badge-status]: https://sonarcloud.io/api/project_badges/measure?project=soerenkoehler_rs-chdiff&metric=alert_status
 [badge-cover]:  https://sonarcloud.io/api/project_badges/measure?project=soerenkoehler_rs-chdiff&metric=coverage
-
-[![rs-chdiff](https://github.com/soerenkoehler-org/rs-chdiff/actions/workflows/rs-chdiff.yml/badge.svg?branch=main)](https://github.com/soerenkoehler-org/rs-chdiff/actions/workflows/rs-chdiff.yml)
