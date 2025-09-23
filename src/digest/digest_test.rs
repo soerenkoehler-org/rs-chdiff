@@ -14,6 +14,13 @@ macro_rules! test_error {
 }
 
 test_error!(
+    nonaccessible_file_yields_error,
+    "generated/digest_test/unreadable.txt",
+    ErrorKind::PermissionDenied,
+    "Permission denied (os error 13)"
+);
+
+test_error!(
     bad_utf8,
     "tests/digest_data/bad_utf8.txt",
     ErrorKind::InvalidData,
@@ -47,17 +54,6 @@ test_error!(
     ErrorKind::Other,
     "hash already defined for path data/file1.dat"
 );
-
-test_error!(
-    file_not_readable,
-    "tests/digest_data/non-existing.txt",
-    ErrorKind::NotFound,
-    "No such file or directory (os error 2)"
-);
-
-fn get_path(file: &str) -> PathBuf {
-    PathBuf::from_str(file).unwrap()
-}
 
 macro_rules! test_hash {
     ($name:ident,$input:expr $(,$path:expr,$hash:expr)*) => {
@@ -95,4 +91,14 @@ test_hash!(
 fn new_digest() {
     let digest = Digest::new();
     assert_eq!(digest.entries, HashMap::from([]));
+}
+
+#[test]
+fn missing_file_yields_empty_digest() {
+    let digest = Digest::from_file(&get_path("tests/digest_data/non-existing.txt")).unwrap();
+    assert_eq!(digest.entries, HashMap::from([]));
+}
+
+fn get_path(file: &str) -> PathBuf {
+    PathBuf::from_str(file).unwrap()
 }
