@@ -9,7 +9,7 @@ use std::{
 use crate::{
     CliErrorText,
     filescanner::{FileList, PatternList, pattern_test::to_patternlist},
-    tests::runner::run_binary,
+    unittest::runner::run_binary,
 };
 
 macro_rules! abs_path {

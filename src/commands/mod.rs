@@ -3,11 +3,11 @@ pub mod create;
 pub mod verify;
 pub mod version;
 
+use clap::Error;
 use std::fmt::Debug;
 
 use crate::Dependencies;
 
-use clap::Error;
 #[cfg(test)]
 use mockall::automock;
 

@@ -15,7 +15,7 @@ use crate::{
         def::{CONFIG_FILE, ENV_HOME},
     },
     filescanner::pattern_test::to_patternlist,
-    tests::runner::run_in_dir,
+    unittest::runner::run_in_dir,
 };
 
 #[test]

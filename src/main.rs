@@ -5,7 +5,7 @@ mod digest;
 mod filescanner;
 
 #[cfg(test)]
-mod tests;
+mod unittest;
 
 use clap::CommandFactory;
 use std::{env::args_os, ffi::OsString};
