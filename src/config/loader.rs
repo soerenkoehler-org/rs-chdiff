@@ -1,5 +1,5 @@
 use glob::Pattern;
-use serde_json::to_writer;
+use serde_json::to_writer_pretty;
 use std::{
     env,
     fs::OpenOptions,
@@ -65,7 +65,7 @@ impl Config {
             .open(filepath)
         {
             Ok(file) => {
-                to_writer(BufWriter::new(file), &default).unwrap();
+                to_writer_pretty(BufWriter::new(file), &default).unwrap();
                 println!("created default config file: {}", filepath.display());
                 Ok(default)
             }
