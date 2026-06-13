@@ -6,7 +6,7 @@ use crate::{
     CliErrorText, Config, Dependencies,
     cli::{ArgsBackup, ArgsCreate, ArgsVerify, parse},
     commands::MockCommandExecutor,
-    tests::{cli_data::*, runner::run_binary},
+    unittest::{cli_data::*, runner::run_binary},
 };
 
 macro_rules! create_mock {

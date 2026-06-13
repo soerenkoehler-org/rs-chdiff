@@ -14,6 +14,7 @@ pub const DIGEST_FILE: &str = ".chdiff.txt";
 #[derive(Serialize, Deserialize, Debug)]
 #[serde(deny_unknown_fields)]
 pub struct Config {
+    // FIXME bad naming: replace . with - or make config item hierarchical
     #[serde(rename = "exclude.absolute")]
     pub exclude_absolute: PatternList,
     #[serde(rename = "exclude.relative")]
