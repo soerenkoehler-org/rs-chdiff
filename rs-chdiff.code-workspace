@@ -14,6 +14,8 @@
         "files.associations": {
             "**/tests/config_data/invalid_list_abs.json": "plaintext",
             "**/tests/config_data/invalid_list_rel.json": "plaintext"
-        }
+        },
+        "telemetry.editStats.enabled": false,
+        "telemetry.feedback.enabled": false
     }
 }
